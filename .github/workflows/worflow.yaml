@@ -42,7 +42,7 @@ jobs:
       - name: Build and Push image
         run: |
           docker buildx build \
-            --file Dockerfile \
+            --file ./webapp/Dockerfile \
             --platform linux/arm64,linux/amd64\
             --tag dongjekim1030/mnist-web:dev \
             --push .
