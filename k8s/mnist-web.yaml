@@ -14,6 +14,8 @@ spec:
       labels:
         app: mnist-web
     spec:
+      imagePullSecrets:
+        - name: dockerhub-secret
       containers:
         - name: mnist-web
           image: dongjekim1030/mnist-web:dev
