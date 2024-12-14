@@ -4,12 +4,12 @@ FROM node:22.5.1-alpine
 WORKDIR /app
 
 # 의존성 파일을 복사하고 설치
-COPY package.json ./
+COPY ./webapp/package.json ./
 RUN npm install -g pnpm
 RUN pnpm install
 
 # 소스 코드 복사
-COPY . .
+COPY ./webapp .
 
 # Vite를 사용해 빌드
 RUN pnpm run build
