@@ -17,5 +17,6 @@ export async function getModelInference(file: File) : Promise<modelResultType> {
     if (!response.ok) {
         throw new Error("Error fetching model inference result");
     }
+    //making changes to a file
     return await response.json();
 }
